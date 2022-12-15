@@ -6,6 +6,8 @@ const port = process.env.PORT || 5000;
 const routes = require('./routes')
 const db = require('./config/db')
 
+app.use(express.json())
+
 // Connect DB
 db.connect()
 
