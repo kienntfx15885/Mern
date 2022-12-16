@@ -6,7 +6,7 @@ mongoose.set('strictQuery', true);
 async function connect() {
     try {
         await mongoose.connect(
-            `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@movies-trailer.ohcumnp.mongodb.net/?retryWrites=true&w=majority`,
+            `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@movies-trailer.ohcumnp.mongodb.net/movies-trailer?retryWrites=true&w=majority`,
         );
         console.log('Connect Successfully');
     } catch (err) {

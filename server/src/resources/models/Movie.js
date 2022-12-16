@@ -19,12 +19,16 @@ const MovieSchema = new Schema({
     image: {
         type: String,
     },
+    studio: {
+        type: String,
+        enum: ['MARVEL', 'DC', 'ANIME']
+    },
     slug: {
         type: String,
         slug: "name",
         unique: true
     }, 
-    userId: {
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
     }
